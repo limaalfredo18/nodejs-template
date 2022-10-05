@@ -1,8 +1,8 @@
 {
-    "name": "node-template",
+    "name": "node-project",
     "version": "1.0.0",
     "type": "module",
-    "description": "Plantilla base para los proyectos desarrollados en el curso de Node.JS de la plataforma LearnThis Academy",
+    "description": "",
     "scripts": {
         "dev": "nodemon src/index.js",
         "start": "node src/index.js",
@@ -12,8 +12,7 @@
         "postinstall": "npm run prepare"
     },
     "author": {
-        "name": "LearnThis Academy",
-        "url": "https://learnthisacademy.com"
+        "name": "ALF"
     },
     "license": "MIT",
     "devDependencies": {
@@ -29,10 +28,19 @@
         "prettier": "2.7.1"
     },
     "imports": {
-        "#Lib/*": "./src/lib/*"
+        "#Config/*": "./src/config/*",
+        "#Controllers/*": "./src/Controllers/*",
+        "#Dto/*": "./src/dto/*",
+        "#Lib/*": "./src/lib/*",
+        "#Routes/*": "./src/routes/*"
     },
     "lint-staged": {
         "*.js": "eslint --fix",
         "*.{js,md}": "prettier --write"
+    },
+    "dependencies": {
+        "dotenv": "^16.0.3",
+        "express": "^4.18.1",
+        "mongoose": "^6.6.5"
     }
 }
